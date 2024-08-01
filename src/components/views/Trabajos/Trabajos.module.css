@@ -1,0 +1,19 @@
+.trabajos {
+    padding: 20px;
+    text-align: center;
+}
+
+.cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.descripcion {
+    margin-top: 0;
+}
+
+.marginHome {
+    margin-bottom: 0;
+}

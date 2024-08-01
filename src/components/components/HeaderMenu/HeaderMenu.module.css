@@ -1,0 +1,68 @@
+.img {
+  height: 190px;
+  width: 300px;
+  padding: 20px;
+}
+
+.AppHeader {
+  font-family: Inter;
+  height: 85px;
+  color: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu {
+  width: 600px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.menuItem {
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  color: black;
+  text-decoration: none;
+}
+
+.menuItem:hover {
+  color: #a8a8a8;
+  transform: scale(1.1);
+}
+
+.menuItemDrawer {
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  color: black;
+  text-decoration: none;
+}
+
+.menuItemDrawer:hover {
+  color: #a8a8a8;
+  transform: translateX(20px) scale(1.1);
+}
+
+.drawerButton {
+  display: none;
+}
+
+@media (max-width: 610px) {
+  .menuItem {
+    display: none;
+  }
+
+  .drawerButton {
+    display: block;
+  }
+
+  .menu {
+    justify-content: flex-end;
+    padding: 60px;
+  }
+}

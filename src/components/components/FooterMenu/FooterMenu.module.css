@@ -1,0 +1,32 @@
+/* Footer.module.css */
+.footer {
+    font-family: Inter;
+    color: black;
+    padding: 20px;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.links {
+    margin-bottom: 10px;
+}
+
+.link {
+    color: black;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 14px;
+}
+
+.link:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+.description {
+    font-size: 12px;
+}

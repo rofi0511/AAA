@@ -1,0 +1,48 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.contactanos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Inter;
+}
+
+.contactanos h2 {
+    margin: 0;
+    font-weight: bold;
+}
+
+.contactanos p {
+    margin: 0;
+}
+
+.card{
+    padding: 20px;
+}
+
+.mapContainer {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    padding-bottom: 56.25%;
+}
+
+.mapContainer iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.textoMapa{
+    padding: 20px;
+}
