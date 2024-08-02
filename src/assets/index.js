@@ -1,0 +1,5 @@
+export { default as Image1 } from './jaguar.jpg'
+export { default as Image2 } from './ImagenA.png'
+export { default as Image3 } from './LogoFooter.png'
+export { default as Image4 } from './LogoHeader.png'
+export { default as Image5 } from './tlaloc.jpg'
