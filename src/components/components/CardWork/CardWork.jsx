@@ -2,10 +2,15 @@ import { Card } from "@mantine/core";
 import styles from "./CardWork.module.css";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import { useState, useRef } from "react";
+import ModalComponent from "../Modal/ModalComponent";
 
-function CardWork({ title, author }) {
+function CardWork({ title, author, descripcion, fechaActualizacion }) {
     const [transform, setTransform] = useState("rotateX(0deg) rotateY(0deg)");
     const cardRef = useRef(null);
+
+    const [isModalOpen, setIsModalOpen] = useState(false)
+    const openModal = () => setIsModalOpen(true)
+    const closeModal = () => setIsModalOpen(false)
 
     const handleMouseMove = (e) => {
         if (!cardRef.current) return;
@@ -27,28 +32,40 @@ function CardWork({ title, author }) {
     };
 
     return (
-        <Card
-            shadow="sm"
-            padding="lg"
-            radius="md"
-            className={styles.card}
-            withBorder
-            style={{ transform }}
-            onMouseMove={handleMouseMove}
-            onMouseLeave={handleMouseLeave}
-            ref={cardRef}
-        >
-            <div className={styles.flex}>
-                <div className={styles.icon}>
-                    <InfoOutlinedIcon />
+        <>
+            <Card
+                shadow="sm"
+                padding="lg"
+                radius="md"
+                className={styles.card}
+                withBorder
+                style={{ transform }}
+                onMouseMove={handleMouseMove}
+                onMouseLeave={handleMouseLeave}
+                ref={cardRef}
+                onClick={openModal}
+            >
+                <div className={styles.flex}>
+                    <div className={styles.icon}>
+                        <InfoOutlinedIcon />
+                    </div>
+                    <div className={styles.text}>
+                        <h2>{author} - {title}</h2>
+                        <p>{descripcion}</p>
+                        <p>{fechaActualizacion}</p>
+                    </div>
                 </div>
-                <div className={styles.text}>
-                    <h2>{author} - {title}</h2>
-                    <p>Descripción</p>
-                    <p>Fecha de actualización</p>
+            </Card>
+            <ModalComponent isOpen={isModalOpen} onClose={closeModal}>
+                <div className={styles.flexModal}>
+                    <div className={styles.textModal}>
+                        <h2>{author} - {title}</h2>
+                        <p>{descripcion}</p>
+                        <p>{fechaActualizacion}</p>
+                    </div>
                 </div>
-            </div>
-        </Card>
+            </ModalComponent>
+        </>
     );
 }
 

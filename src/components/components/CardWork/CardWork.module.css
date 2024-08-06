@@ -26,6 +26,17 @@
     flex-direction: column;
 }
 
+.flexModal {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.textModal {
+    display: flex;
+    flex-direction: column;
+}
+
 .text h2 {
     margin: 0;
 }
@@ -33,3 +44,5 @@
 .text p {
     margin: 0;
 }
+
+

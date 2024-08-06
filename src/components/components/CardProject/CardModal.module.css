@@ -1,0 +1,24 @@
+.modalContainer{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalCard{
+    width: 70vh;
+    height: 60vh;
+    border-radius: 20px;
+    background-color: inherit;
+}
+
+.modalContent{
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.3);
+}

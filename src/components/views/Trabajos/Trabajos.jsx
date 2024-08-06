@@ -1,7 +1,7 @@
 import React from 'react';
 import CardWork from '../../components/CardWork/CardWork';
 import styles from "./Trabajos.module.css"
-import { trabajosData, trabajosVendidos } from '../../Trabajos/trabajosData';
+import { trabajosData, trabajosVendidos } from '../../Data/trabajosData';
 import classNames from 'classnames';
 
 const Trabajos = ({view}) => {
@@ -18,7 +18,7 @@ const Trabajos = ({view}) => {
       {view == 'home' && <p className={styles.descripcion}>Más vendidos</p>}
       <div className={styles.cardContainer}>
         {data.map(trabajo => (
-          <CardWork key={trabajo.id} title={trabajo.title} author={trabajo.author} />
+          <CardWork key={trabajo.id} title={trabajo.title} author={trabajo.author} descripcion={trabajo.descripcion} fechaActualizacion={trabajo.fechaActualizacion} />
         ))}
       </div>
     </div>
