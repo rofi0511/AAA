@@ -29,7 +29,7 @@ const Home = () => {
       <section className={styles.trabajosSection} data-aos="fade-up">
         <Trabajos view="home" />
       </section>
-      <ModalComponent isOpen={isModalOpen} onClose={closeModal} title={"Conócenos"}>
+      <ModalComponent isOpen={isModalOpen} onClose={closeModal}>
         <section className={styles.intro} data-aos="fade-up">
           <div className={styles.content}>
             <h1 data-aos="zoom-in">Autores Asociados Autónomos</h1>

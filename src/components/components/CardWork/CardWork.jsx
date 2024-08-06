@@ -37,7 +37,7 @@ function CardWork({ title, author, descripcion, fechaActualizacion }) {
                 shadow="sm"
                 padding="lg"
                 radius="md"
-                className={styles.card}
+                className={styles.cardW}
                 withBorder
                 style={{ transform }}
                 onMouseMove={handleMouseMove}

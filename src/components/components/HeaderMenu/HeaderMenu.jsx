@@ -1,5 +1,5 @@
 import styles from './HeaderMenu.module.css'
-import LogoHeader from '../../../assets/LogoHeader.png'
+import { Image4 } from '../../../assets';
 import { Drawer, Burger } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { Link } from 'react-router-dom';
@@ -9,7 +9,7 @@ function HeaderMenu({routes}) {
 
     return (
         <div className={styles.AppHeader}>
-            <img className={styles.img} src={LogoHeader} alt="Descripción de la imagen" />
+            <img className={styles.img} src={Image4} alt="Descripción de la imagen" />
             <div className={styles.menu}>
                 {routes.map((route, index) => (
                     <Link to={route.path} key={index} className={styles.menuItem}>
